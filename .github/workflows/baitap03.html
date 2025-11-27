@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Game Đoán Số</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="guess-game-container" id="guessGame">
+        <h2>🎲 Game Đoán Số (1-100)</h2>
+        <p>Tôi đã chọn một số bí mật. Hãy nhập đoán của bạn:</p>
+        <div class="input-group">
+            <input type="number" id="guessInput" min="1" max="100" placeholder="Nhập số đoán (1-100)">
+            <button id="submitGuessBtn">Đoán</button>
+        </div>
+        
+        <p id="message" class="message">Bắt đầu trò chơi mới!</p>
+        <p>Số lần thử: <span id="countDisplay">0</span></p>
+        
+        <button id="newGameBtn" style="display: none; margin-top: 15px;">Chơi Lại</button>
+
+        <div class="confetti-container" id="confettiContainer"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Khởi tạo Game khi trang tải xong
+        window.addEventListener('load', initGuessGame);
+    </script>
+</body>
+</html>
